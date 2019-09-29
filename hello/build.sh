@@ -7,7 +7,7 @@ ca65 hello.s
 ca65 -t cx16 text.s
 
 # Linker
-ld65 -o hello.prg -t cx16 hello.o text.o c64.lib
+ld65 -o hello.prg -t cx16 -Ln hello.lbl -m hello.map hello.o text.o c64.lib
 
 # Emulator
 x16emu -prg hello.prg &
